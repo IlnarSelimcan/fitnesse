@@ -20,15 +20,17 @@ public class HashTableTest {
     }
 
     private String hashTable() {
-        return "<table class=\"hash_table\">" + HtmlElement.endl +
-        "\t<tr class=\"hash_row\">" + HtmlElement.endl +
-        "\t\t<td class=\"hash_key\">a</td>" + HtmlElement.endl +
-        "\t\t<td class=\"hash_value\">b</td>" + HtmlElement.endl +
-        "\t</tr>" + HtmlElement.endl +
-        "\t<tr class=\"hash_row\">" + HtmlElement.endl +
-        "\t\t<td class=\"hash_key\">c</td>" + HtmlElement.endl +
-        "\t\t<td class=\"hash_value\">d</td>" + HtmlElement.endl +
-        "\t</tr>" + HtmlElement.endl +
-        "</table>" + HtmlElement.endl;
+        return ("<table class=\"hash_table\">" + HtmlElement.endl +
+                "<tr class=\"hash_row\">" + HtmlElement.endl +
+                "<td class=\"hash_key\">a</td>" + HtmlElement.endl +
+                "<td class=\"hash_value\">b</td>" + HtmlElement.endl +
+                "</tr>" + HtmlElement.endl +
+                "<tr class=\"hash_row\">" + HtmlElement.endl +
+                "<td class=\"hash_key\">c</td>" + HtmlElement.endl +
+                "<td class=\"hash_value\">d</td>" + HtmlElement.endl +
+                "</tr>" + HtmlElement.endl +
+                "</table>" + HtmlElement.endl)
+                .replaceAll("(\n\r?|\r\n?)", "")
+                .replaceAll("\\s+", " ");
     }
 }

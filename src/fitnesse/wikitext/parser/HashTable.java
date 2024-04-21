@@ -43,6 +43,6 @@ public class HashTable extends SymbolType implements Rule, Translation {
                 row.add(cell);
             }
         }
-        return table.html();
+        return table.html().replaceAll("(\n\r?|\r\n?)", "").replaceAll("\\s+", " ").replaceAll(" <", "<");
    }
 }
